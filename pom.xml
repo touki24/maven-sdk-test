@@ -4,6 +4,7 @@
   <groupId>id.visionplus</groupId>
   <artifactId>sdk-test</artifactId>
   <version>0.1.0</version>
+  <packaging>aar</packaging>
   <dependencies>
     <dependency>
       <groupId>androidx.core</groupId>

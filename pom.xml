@@ -5,10 +5,10 @@
   <artifactId>sdk-test</artifactId>
   <version>0.1.0</version>
 
- <repositories>
+  <repositories>
       <repository>
-          <id>mvnrepository</id>
-          <url>https://mvnrepository.com/artifact/</url>
+          <id>dl.google.com</id>
+          <url>https://dl.google.com/android/maven2/</url>
       </repository>
         <!-- Other repositories -->
   </repositories>

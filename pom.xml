@@ -7,8 +7,8 @@
 
   <repositories>
         <repository>
-            <id>custom-repo</id>
-            <url>https://mvnrepository.com/artifact/</url>
+           <id>dl.google.com</id>
+           <url>https://dl.google.com/android/maven2/</url>
         </repository>
         <!-- Other repositories -->
     </repositories>

@@ -6,53 +6,67 @@
   <version>0.1.0</version>
 
   <repositories>
-      <repository>
-          <id>dl.google.com</id>
-          <url>https://dl.google.com/android/maven2/</url>
-      </repository>
+        <repository>
+            <id>custom-repo</id>
+            <url>https://mvnrepository.com/artifact/</url>
+        </repository>
         <!-- Other repositories -->
-  </repositories>
-  
-  <dependencies>
-    <dependency>
-      <groupId>androidx.core</groupId>
-      <artifactId>core-ktx</artifactId>
-      <version>1.9.0</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.lifecycle</groupId>
-      <artifactId>lifecycle-runtime-ktx</artifactId>
-      <version>2.6.2</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.activity</groupId>
-      <artifactId>activity-compose</artifactId>
-      <version>1.7.2</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.compose.ui</groupId>
-      <artifactId>ui</artifactId>
-      <version>1.4.0</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.compose.ui</groupId>
-      <artifactId>ui-graphics</artifactId>
-      <version>1.4.0</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.compose.ui</groupId>
-      <artifactId>ui-tooling-preview</artifactId>
-      <version>1.4.0</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.compose.material3</groupId>
-      <artifactId>material3</artifactId>
-      <version>1.0.1</version>
-    </dependency>
-    <dependency>
-      <groupId>androidx.navigation</groupId>
-      <artifactId>navigation-compose</artifactId>
-      <version>2.6.0</version>
-    </dependency>
-  </dependencies>
+    </repositories>
+    
+    <dependencyManagement>
+        <dependencies>
+            <!-- Define the version to manage conflicts -->
+            <dependency>
+                <groupId>androidx.compose.ui</groupId>
+                <artifactId>ui-text</artifactId>
+                <version>1.4.0</version> <!-- Use a version that resolves conflicts -->
+            </dependency>
+            <!-- Add other managed dependencies if needed -->
+        </dependencies>
+    </dependencyManagement>
+
+    <dependencies>
+        <dependency>
+            <groupId>androidx.core</groupId>
+            <artifactId>core-ktx</artifactId>
+            <version>1.9.0</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.lifecycle</groupId>
+            <artifactId>lifecycle-runtime-ktx</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.activity</groupId>
+            <artifactId>activity-compose</artifactId>
+            <version>1.7.2</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.compose.ui</groupId>
+            <artifactId>ui</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.compose.ui</groupId>
+            <artifactId>ui-graphics</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.compose.ui</groupId>
+            <artifactId>ui-tooling-preview</artifactId>
+            <version>1.4.0</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.compose.material3</groupId>
+            <artifactId>material3</artifactId>
+            <version>1.0.1</version>
+        </dependency>
+        <dependency>
+            <groupId>androidx.navigation</groupId>
+            <artifactId>navigation-compose</artifactId>
+            <version>2.6.0</version>
+        </dependency>
+        <!-- Include other dependencies -->
+    </dependencies>
+    <!-- Other configurations -->
 </project>

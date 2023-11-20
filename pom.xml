@@ -53,6 +53,10 @@
                     <groupId>androidx.compose.ui</groupId>
                     <artifactId>ui-unit</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-geometry</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>

@@ -5,7 +5,7 @@
   <artifactId>sdk-test</artifactId>
   <version>0.1.0</version>
 
-  <repositories>
+    <repositories>
         <repository>
            <id>dl.google.com</id>
            <url>https://dl.google.com/android/maven2/</url>
@@ -40,6 +40,12 @@
             <groupId>androidx.activity</groupId>
             <artifactId>activity-compose</artifactId>
             <version>1.7.2</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-text</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>androidx.compose.ui</groupId>
@@ -60,6 +66,12 @@
             <groupId>androidx.compose.material3</groupId>
             <artifactId>material3</artifactId>
             <version>1.0.1</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-text</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <dependency>
             <groupId>androidx.navigation</groupId>

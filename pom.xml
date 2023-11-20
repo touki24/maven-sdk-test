@@ -49,6 +49,10 @@
                     <groupId>androidx.compose.ui</groupId>
                     <artifactId>ui-graphics</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-unit</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -85,6 +89,12 @@
             <groupId>androidx.navigation</groupId>
             <artifactId>navigation-compose</artifactId>
             <version>2.6.0</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-unit</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
         <!-- Include other dependencies -->
     </dependencies>

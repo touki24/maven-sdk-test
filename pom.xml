@@ -10,6 +10,15 @@
   <groupId>id.visionplus</groupId>
   <artifactId>sdk-test</artifactId>
   <version>0.1.0</version>
+
+    <repositories>
+        <repository>
+           <id>dl.google.com</id>
+           <url>https://dl.google.com/android/maven2/</url>
+        </repository>
+        <!-- Other repositories -->
+    </repositories>
+    
   <packaging>pom</packaging>
   <dependencyManagement>
     <dependencies>

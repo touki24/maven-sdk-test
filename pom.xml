@@ -1,110 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <!-- This module was also published with a richer model, Gradle metadata,  -->
+  <!-- which should be used instead. Do not delete the following line which  -->
+  <!-- is to indicate to Gradle or any Gradle module metadata file consumer  -->
+  <!-- that they should prefer consuming it instead. -->
+  <!-- do_not_remove: published-with-gradle-metadata -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>id.visionplus</groupId>
   <artifactId>sdk-test</artifactId>
   <version>0.1.0</version>
-
-    <repositories>
-        <repository>
-           <id>dl.google.com</id>
-           <url>https://dl.google.com/android/maven2/</url>
-        </repository>
-        <!-- Other repositories -->
-    </repositories>
-    
-    <dependencyManagement>
-        <dependencies>
-            <!-- Define the version to manage conflicts -->
-            <dependency>
-                <groupId>androidx.compose.ui</groupId>
-                <artifactId>ui-text</artifactId>
-                <version>1.4.0</version> <!-- Use a version that resolves conflicts -->
-            </dependency>
-            <!-- Add other managed dependencies if needed -->
-        </dependencies>
-    </dependencyManagement>
-
+  <packaging>pom</packaging>
+  <dependencyManagement>
     <dependencies>
-        <dependency>
-            <groupId>androidx.core</groupId>
-            <artifactId>core-ktx</artifactId>
-            <version>1.9.0</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.lifecycle</groupId>
-            <artifactId>lifecycle-runtime-ktx</artifactId>
-            <version>2.6.2</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.activity</groupId>
-            <artifactId>activity-compose</artifactId>
-            <version>1.7.2</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-text</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-graphics</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-unit</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-geometry</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>androidx.compose.ui</groupId>
-            <artifactId>ui</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.compose.ui</groupId>
-            <artifactId>ui-graphics</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.compose.ui</groupId>
-            <artifactId>ui-tooling-preview</artifactId>
-            <version>1.4.0</version>
-        </dependency>
-        <dependency>
-            <groupId>androidx.compose.material3</groupId>
-            <artifactId>material3</artifactId>
-            <version>1.0.1</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-text</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-graphics</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>androidx.navigation</groupId>
-            <artifactId>navigation-compose</artifactId>
-            <version>2.6.0</version>
-            <exclusions>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-unit</artifactId>
-                </exclusion>
-                <exclusion>
-                    <groupId>androidx.compose.ui</groupId>
-                    <artifactId>ui-geometry</artifactId>
-                </exclusion>
-            </exclusions>
-        </dependency>
-        <!-- Include other dependencies -->
+      <dependency>
+        <groupId>androidx.compose</groupId>
+        <artifactId>compose-bom</artifactId>
+        <version>2023.03.00</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
     </dependencies>
-    <!-- Other configurations -->
+  </dependencyManagement>
+  <dependencies>
+    <dependency>
+      <groupId>org.jetbrains.kotlin</groupId>
+      <artifactId>kotlin-stdlib-jdk8</artifactId>
+      <version>1.8.10</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.core</groupId>
+      <artifactId>core-ktx</artifactId>
+      <version>1.9.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.lifecycle</groupId>
+      <artifactId>lifecycle-runtime-ktx</artifactId>
+      <version>2.6.2</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.activity</groupId>
+      <artifactId>activity-compose</artifactId>
+      <version>1.7.2</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.navigation</groupId>
+      <artifactId>navigation-compose</artifactId>
+      <version>2.6.0</version>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.compose.ui</groupId>
+      <artifactId>ui</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.compose.ui</groupId>
+      <artifactId>ui-graphics</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.compose.ui</groupId>
+      <artifactId>ui-tooling-preview</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+    <dependency>
+      <groupId>androidx.compose.material3</groupId>
+      <artifactId>material3</artifactId>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
 </project>

@@ -127,6 +127,10 @@
       <scope>runtime</scope>
         <exclusions>
             <exclusion>
+                <groupId>androidx.activity</groupId>
+                <artifactId>activity-ktx</artifactId>
+            </exclusion>
+            <exclusion>
                 <groupId>androidx.compose.ui</groupId>
                 <artifactId>ui-util</artifactId>
             </exclusion>

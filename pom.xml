@@ -45,6 +45,10 @@
                     <groupId>androidx.compose.ui</groupId>
                     <artifactId>ui-text</artifactId>
                 </exclusion>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-graphics</artifactId>
+                </exclusion>
             </exclusions>
         </dependency>
         <dependency>
@@ -70,6 +74,10 @@
                 <exclusion>
                     <groupId>androidx.compose.ui</groupId>
                     <artifactId>ui-text</artifactId>
+                </exclusion>
+                <exclusion>
+                    <groupId>androidx.compose.ui</groupId>
+                    <artifactId>ui-graphics</artifactId>
                 </exclusion>
             </exclusions>
         </dependency>
